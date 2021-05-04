@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1 style="margin-top: 150px; margin-left: 150px;">You have been successfully registered</h1>
+
+<form method="POST">
+    {% csrf_token   %}
+    <fieldset style="margin-left: 150px; margin-right: 150px;" class="form-group">
+    {{ form|crispy }}
+    </fieldset>
+    <button style="margin-left: 150px;"><button type="submit">Sign in</button>
+</form>
+
+{% endblock content %}
